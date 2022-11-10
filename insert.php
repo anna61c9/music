@@ -4,8 +4,8 @@ require "settings/init.php";
 if (!empty($_POST["data"])){
     $data = $_POST["data"];
 
-    $sql = "INSERT INTO produkter (prodNavn, prodBeskrivelse, prodPris) VALUES(:prodNavn, :prodBeskrivelse, :prodPris)";
-$bind = [":prodNavn" => $data["prodNavn"], ":prodBeskrivelse" => $data["prodBeskrivelse"], ":prodPris" => $data["prodPris"]];
+    $sql = "INSERT INTO musik (musikTitel, musikKunstner, musikAlbum, musikTid) VALUES(:musikTitel, :musikKunstner, :musikAlbum, :musikTid)";
+$bind = [":musikTitel" => $data["musikTitel"], ":musikKunstner" => $data["musikKunstner"], ":musikAlbum" => $data["musikAlbum"], ":musikTid" => $data["musikTid"]];
 
     $db->sql($sql, $bind,false);
 
@@ -37,24 +37,38 @@ $bind = [":prodNavn" => $data["prodNavn"], ":prodBeskrivelse" => $data["prodBesk
 
 <body>
 
-<form method="post" action="insert.php">
+<form method="post" action="insert.php" enctype="multipart/form-data">
     <div class="row">
-        <div class="col-12 col-md-6">
-            <div class="form-group">
-                <label for="prodNavn">Produkt navn</label>
-                <input class="form-control" type="text" name="data[prodNavn]" id="" placeholder="" value="">
-            </div>
-        </div>
-        <div class="col-12 col-md-6">
-            <div class="form-group">
-                <label for="prodPris">Produkt pris</label>
-                <input class="form-control" type="number" step="0.1" name="data[prodPris]" id="" placeholder="" value="">
-            </div>
-        </div>
+
         <div class="col-12">
+            <label class="form-label" for="musikBilled">Produkt billed</label>
+            <input type="file" class="form-control" id="musikBilled" name="musikBilled">
+        </div>
+
+        <div class="col-12 col-md-6">
             <div class="form-group">
-                <label for="prodBeskrivelse">Produkt beskrivelse</label>
-                <textarea class="form-control" type="number" step="0.1" name="data[prodBeskrivelse]" id="" placeholder="" value=""></textarea>
+                <label for="musikTitel">Musik Titel</label>
+                <input class="form-control" type="text" name="data[musikTitel]" id="" placeholder="" value="">
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <div class="form-group">
+                <label for="musikKunstner">Musik Kunstner</label>
+                <input class="form-control" type="text" step="0.1" name="data[musikKunstner]" id="" placeholder="" value="">
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <div class="form-group">
+                <label for="musikAlbum">Musik Album</label>
+                <input class="form-control" type="text" step="0.1" name="data[musikAlbum]" id="" placeholder="" value="">
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="form-group">
+                <label for="musikTid">Musik Tid</label>
+                <input class="form-control" type="number" step="0.1" name="data[musikTid]" id="" placeholder="" value="">
             </div>
         </div>
         <div class="col-12 col-md-6 offset-md-6">

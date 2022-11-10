@@ -19,4 +19,9 @@ $custom-colors: (
 );
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
+$mus: (
+        "primaryTekst": bolder,
+)
+;
+
 @import "../node_modules/bootstrap/scss/bootstrap";
