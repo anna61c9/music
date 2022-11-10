@@ -30,7 +30,7 @@ $musik = $db->sql("SELECT * FROM musik");
 <?php
 
 foreach ($musik as $musikken){
-    echo $musikken->musikTitel . " - " . $musikken->musikKunsnter . "<br>";
+    echo $musikken->musikTitel . " - " . $musikken->musikKunstner . " - " . $musikken->musikAlbum . " - " . $musikken->musikTid . " - " . $musikken->musikDato . "<br>";
 }
 
 ?>
