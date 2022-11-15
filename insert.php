@@ -68,7 +68,7 @@ $bind = [":musikTitel" => $data["musikTitel"], ":musikKunstner" => $data["musikK
         <div class="col-12 col-md-6">
             <div class="form-group">
                 <label for="musikTid">Musik Tid</label>
-                <input class="form-control" type="number" step="0.1" name="data[musikTid]" id="" placeholder="" value="">
+                <input class="form-control" type="number" step="0.01" name="data[musikTid]" id="" placeholder="" value="">
             </div>
         </div>
         <div class="col-12 col-md-6 offset-md-6">
