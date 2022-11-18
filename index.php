@@ -75,12 +75,13 @@ $musik = $db->sql("SELECT * FROM musik");
             </select>
         </div>
     </div>
+</div>
 
 <?php
 foreach ($musik as $musikken){
     ?>
 
-    <div class="row">
+    <div class="container-fluid">
         <div class="card col-12 col-md-6 col-lg-5 p-2 m-3 shadow">
             <div class="row">
                 <div class="col-4">
