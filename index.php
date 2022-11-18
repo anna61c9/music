@@ -109,6 +109,7 @@ foreach ($musik as $musikken){
     </div>
 </div>
 </div>
+    </div>
   <?php
 }
 ?>
