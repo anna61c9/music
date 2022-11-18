@@ -114,7 +114,7 @@ foreach ($musik as $musikken) {
 }
 ?>
 
-<div class="container-fluid bg-minfarve">
+<div class="container-fluid bg-minfarve fixed-bottom">
     <div class="details">
         <div class="row justify-content-center">
             <div class="track-art col-3"></div>
