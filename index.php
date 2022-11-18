@@ -61,6 +61,25 @@ $musik = $db->sql("SELECT * FROM musik");
 
 <br><br>
 
+<div class="container">
+
+    <div class="musik">
+        <div class="filter p-5">
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                    <input type="search" class="form-control nameSearch" placeholder="søg">
+                </div>
+            </div>
+        </div>
+
+        <div class="items">
+
+        </div>
+    </div>
+</div>
+
+<br><br>
+
 <div class="container-fluid justify-content-center col-9">
     <div class="row">
         <div class="col-8">
@@ -114,6 +133,7 @@ foreach ($musik as $musikken) {
 }
 ?>
 
+
 <div class="container-fluid bg-minfarve fixed-bottom">
     <div class="details">
         <div class="row justify-content-center">
@@ -161,5 +181,13 @@ foreach ($musik as $musikken) {
         x.classList.toggle("change");
     }
 </script>
+
+<script type="module">
+    import Musik from "./js/musik.js";
+
+    const musik = new Musik();
+    musik.init();
+</script>
+
 </body>
 </html>
