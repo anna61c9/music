@@ -39,6 +39,7 @@ export default class Musik {
                         <h5 class="card-text">${item.musikKunstner} </h5>
                         <p class="card-text">${item.musikTid} </p>
                         <p class="card-text">${item.musikDato} </p>
+                        <a href="#"><img src="images/download.png" alt="social"></a>
                     </div>
                 </div>
         `;
@@ -47,7 +48,7 @@ export default class Musik {
         }
 
         this.items.innerHTML = '';
-        this.rootElem.appendChild(row);
+        this.items.appendChild(row);
 
     }
 
