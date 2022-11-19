@@ -66,7 +66,7 @@ $musik = $db->sql("SELECT * FROM musik");
     <div class="musik">
         <div class="filter p-5">
             <div class="row">
-                <div class="col-md-4 offset-md-4">
+                <div class="col-md-4">
                     <input type="search" class="form-control nameSearch" placeholder="søg">
                 </div>
             </div>
@@ -79,22 +79,6 @@ $musik = $db->sql("SELECT * FROM musik");
 </div>
 
 <br><br>
-
-<div class="container-fluid justify-content-center col-9">
-    <div class="row">
-        <div class="col-8">
-            <h1 style="color: #62388e">Liste</h1>
-        </div>
-        <div class="col-3 m-3 justify-content-end">
-            <select class="form-select bg-minfarve border-minfarve" style="color:#ced4da"
-                    aria-label="Default select example">
-                <option selected style="color:#ced4da">Top 10</option>
-                <option value="1" style="color:#ced4da">Genre</option>
-                <option value="2" style="color:#ced4da">Alphabetic</option>
-            </select>
-        </div>
-    </div>
-</div>
 
 <?php
 foreach ($musik as $musikken) {

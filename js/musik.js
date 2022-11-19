@@ -29,10 +29,11 @@ export default class Musik {
             col.classList.add('col-12', 'col-md-6', 'col-lg-5', 'p-2', 'm-5', 'shadow');
 
             col.innerHTML = `
+            <div class="row">
                 <div class="col-4">
                 <img src="images/${item.musikBilled}" class="card-img-top" alt="cover">
                 </div>
-                <div class="col-12">
+                <div class="col-6">
                     <div class="card-body">
                         <a href="sang.php"><h5 class="card-title">${item.musikTitel} </h5></a>
                         <h5 class="card-text">${item.musikAlbum} </h5>
@@ -42,6 +43,7 @@ export default class Musik {
                         <a href="#"><img src="images/download.png" alt="social"></a>
                     </div>
                 </div>
+            </div>
         `;
 
             row.appendChild(col);
