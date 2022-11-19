@@ -93,47 +93,14 @@ a { text-decoration: none; }
 	box-shadow: #000000;
 }
 
-
-.player {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	justify-content: center;
-}
-
-.details {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
-.track-art {
-	margin-left: 50px;
-	margin-top: 50px;
-	height: 150px;
-	width: 150px;
-	background-image: URL("https://source.unsplash.com/Qrspubmx6kE/640x360");
-	background-size: cover;
-	background-position: center;
-	border-radius: 10%;
-}
-
 .track-name {
 	font-size: 2rem;
-	margin-left: 50px;
+
 }
 
 .track-artist {
 	font-size: 1.5rem;
-	margin-left: 50px;
-}
 
-
-.buttons {
-	display: flex;
-	flex-direction: row;
-	align-items: flex-end;
-	justify-content: center;
 }
 
 .playpause-track,
@@ -150,23 +117,6 @@ a { text-decoration: none; }
 .prev-track:hover,
 .next-track:hover {
 	opacity: 1.0;
-}
-
-
-.slider_container {
-	width: 80%;
-	max-width: 1250px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.slider_container-v{
-	width: 75%;
-	max-width: 400px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 
 .seek_slider, .volume_slider {
@@ -212,7 +162,7 @@ a { text-decoration: none; }
 
 i.fa-volume-down,
 i.fa-volume-up {
-	padding: 10px;
+	padding: 5px;
 }
 
 i.fa-play-circle,
@@ -222,6 +172,29 @@ i.fa-step-backward {
 	cursor: pointer;
 }
 
-.beskrivelse {
+.buttons {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+.slider_container {
+	width: 80%;
+	max-width: 1250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.slider_container-v{
+	width: 75%;
+	max-width: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.beskrivelse{
 	border: none;
 }
