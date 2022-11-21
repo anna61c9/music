@@ -12,7 +12,6 @@ $bind = [":musikTitel" => $data["musikTitel"], ":musikKunstner" => $data["musikK
     echo "Produktet er nu sat ind . <a href='insert.php'>Indsæt flere produkter</a>";
     exit;
 }
-
 ?>
 
 
@@ -48,29 +47,51 @@ $bind = [":musikTitel" => $data["musikTitel"], ":musikKunstner" => $data["musikK
         <div class="col-12 col-md-6">
             <div class="form-group">
                 <label for="musikTitel">Musik Titel</label>
-                <input class="form-control" type="text" name="data[musikTitel]" id="" placeholder="" value="">
+                <input class="form-control" type="text" name="data[musikTitel]" id="musikTitel" placeholder="" value="">
             </div>
         </div>
 
         <div class="col-12 col-md-6">
             <div class="form-group">
                 <label for="musikKunstner">Musik Kunstner</label>
-                <input class="form-control" type="text" step="0.1" name="data[musikKunstner]" id="" placeholder="" value="">
+                <input class="form-control" type="text" step="0.1" name="data[musikKunstner]" id="musikKunstner" placeholder="" value="">
             </div>
         </div>
 
         <div class="col-12 col-md-6">
             <div class="form-group">
                 <label for="musikAlbum">Musik Album</label>
-                <input class="form-control" type="text" step="0.1" name="data[musikAlbum]" id="" placeholder="" value="">
+                <input class="form-control" type="text" step="0.1" name="data[musikAlbum]" id="musikAlbum" placeholder="" value="">
             </div>
         </div>
         <div class="col-12 col-md-6">
             <div class="form-group">
                 <label for="musikTid">Musik Tid</label>
-                <input class="form-control" type="number" step="0.01" name="data[musikTid]" id="" placeholder="" value="">
+                <input class="form-control" type="number" step="0.01" name="data[musikTid]" id="musikTid" placeholder="" value="">
             </div>
         </div>
+
+        <div class="col-12 col-md-6">
+            <div class="form-group">
+                <label for="musikRating">Musik rating</label>
+                <input class="form-control" type="number" step="0.01" step="0.01" name="data[musikRating]" id="musikRating" placeholder="" value="">
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <div class="form-group">
+                <label for="musikTid">Musik Genre</label>
+                <input class="form-control" type="text" name="data[musikGenre]" id="musikGenre" placeholder="" value="">
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <div class="form-group">
+                <label for="musikBeskrivelse">Musik Beskrivelse</label>
+                <textarea class="form-control" type="text" name="data[musikBeskrivelse]" id="musikBeskrivelse" placeholder="" value=""></textarea>
+            </div>
+        </div>
+
         <div class="col-12 col-md-6 offset-md-6">
 <button class="form-control btn btn-primary" type="submit" id="btnSubmit">Opret produkt</button>
         </div>
@@ -92,7 +113,6 @@ $bind = [":musikTitel" => $data["musikTitel"], ":musikKunstner" => $data["musikK
         ]
     });
 </script>
-
 
 </body>
 </html>

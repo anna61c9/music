@@ -1,9 +1,8 @@
 <?php
 require "settings/init.php";
 
-$musik = $db->sql("SELECT * FROM musik");
+$musik = $db->sql("SELECT * FROM musik WHERE musikId=6");
 ?>
-
 <!DOCTYPE html>
 <html lang="da">
 <head>
@@ -62,66 +61,56 @@ $musik = $db->sql("SELECT * FROM musik");
 
 <div class="container beskrivelse justify-content-center">
 
-    <div class="row">
-        <div class="card col-12 col-md-6 col-lg-5 p-2 m-3">
-            <img src="images/ace%20of%20spades.jpg" class="card-img-top" style="width: 500vh" alt="cover">
-        </div>
-    </div>
-</div>
+<?php
+foreach ($musik as $musikken) {
+    ?>
 
-        <?php
-        foreach ($musik as $musikken) {
-            ?>
+    <div class="container">
+        <div class="row">
+            <div class="card-body">
+            <div class="card col-12 col-md-6 col-lg-5 p-2 m-3 shadow">
+                        <img src="images/ace%20of%20spades.jpg" class="card-img-top" style="width: 500vh" alt="cover">
+                <div class="col-8">
 
-            <div class="container">
-                <div class="row">
-                    <div class="card col-12 col-md-6 col-lg-5 p-2 m-3 shadow">
-                        <div class="row">
-                            </div>
-                            <div class="col-8">
-                                <div class="card-body">
-                                    <a href="sang.php"><h5 class="card-title"><?php echo $musikken->musikTitel; ?></h5></a>
-                                    <p class="card-text" style="color: #7f8793">     <?php
-                                        echo $musikken->musikKunstner
-                                        ?>
-                                        <br>
-                                        <?php
-                                        echo $musikken->musikAlbum
-                                        ?></p>
-                                    <?php
-                                    echo $musikken->musikTid
-                                    ?>
-                                    <?php
-                                    echo $musikken->musikDato
-                                    ?>
-                                    <?php
-                                    echo $musikken->musikGenre
-                                    ?>
-                                    <?php
-                                    echo $musikken->musikBeskrivelse
-                                    ?>
-                                    <?php
-                                    echo $musikken->musikRating
-                                    ?>
-                                </div>
-                            </div>
-                        </div>
+                        <a href="sang.php"><h5 class="card-title"><?php echo $musikken->musikTitel; ?></h5></a>
+                        <p class="card-text" style="color: #7f8793">     <?php
+                            echo $musikken->musikKunstner
+                            ?>
+                            <br>
+                            <?php
+                            echo $musikken->musikAlbum
+                            ?></p>
+                    <br>
+                        <?php
+                        echo $musikken->musikTid
+                        ?>
+                    <br><br>
+
+                        <?php
+                        echo $musikken->musikGenre
+                        ?>
+                        <?php
+                        echo $musikken->musikBeskrivelse
+                        ?>
+                    <br><br>
+
+                        <?php
+                        echo $musikken->musikRating
+                        ?>
+
+                    <br><br>
+                    <?php
+                    echo $musikken->musikDato
+                    ?>
                     </div>
                 </div>
             </div>
-            <?php
-        }
-        ?>
-
-
-
-<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-    function myFunction(x) {
-        x.classList.toggle("change");
-    }
-</script>
+        </div>
+    </div>
+    </div>
+    <?php
+}
+?>
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -130,13 +119,5 @@ $musik = $db->sql("SELECT * FROM musik");
         x.classList.toggle("change");
     }
 </script>
-
-<script type="module">
-    import Musik from "./js/musik.js";
-
-    const musik = new Musik();
-    musik.init();
-</script>
-
 </body>
 </html>

@@ -3,7 +3,6 @@ require "settings/init.php";
 
 $musik = $db->sql("SELECT * FROM musik");
 ?>
-
 <!DOCTYPE html>
 <html lang="da">
 <head>
@@ -60,6 +59,7 @@ $musik = $db->sql("SELECT * FROM musik");
 </nav>
 
 <br><br>
+
 
 <div class="container">
 
