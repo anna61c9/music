@@ -80,46 +80,6 @@ $musik = $db->sql("SELECT * FROM musik");
 
 <br><br>
 
-<?php
-foreach ($musik as $musikken) {
-    ?>
-
-    <div class="container">
-        <div class="row">
-            <div class="card col-12 col-md-6 col-lg-5 p-2 m-3 shadow">
-                <div class="row">
-                    <div class="col-4">
-                        <?php
-                        echo "<img src='images/" . $musikken->musikBilled . "' class='card-img-top' alt='cover'>"
-                        ?>
-                    </div>
-                    <div class="col-8">
-                        <div class="card-body">
-                            <a href="sang.php"><h5 class="card-title"><?php echo $musikken->musikTitel; ?></h5></a>
-                            <p class="card-text" style="color: #7f8793">     <?php
-                                echo $musikken->musikKunstner
-                                ?>
-                                <br>
-                                <?php
-                                echo $musikken->musikAlbum
-                                ?></p>
-                            <?php
-                            echo $musikken->musikTid
-                            ?>
-                            <?php
-                            echo $musikken->musikDato
-                            ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <?php
-}
-?>
-
-
 <div class="container-fluid bg-minfarve fixed-bottom" style="max-height: 10rem;">
     <div class="container details pt-3">
         <div class="row justify-content-center mt-3">

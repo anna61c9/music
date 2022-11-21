@@ -1,3 +1,9 @@
+<?php
+require "settings/init.php";
+
+$musik = $db->sql("SELECT * FROM musik");
+?>
+
 <!DOCTYPE html>
 <html lang="da">
 <head>
@@ -60,32 +66,54 @@
         <div class="card col-12 col-md-6 col-lg-5 p-2 m-3">
             <img src="images/ace%20of%20spades.jpg" class="card-img-top" style="width: 500vh" alt="cover">
         </div>
-
-        <div class="card col-12 col-md-6 col-lg-5 p-2 m-3">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text" style="color: #7f8793">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Fusce quis lectus quis sem lacinia nonummy. Proin mollis lorem non dolor.
-                    In hac habitasse platea dictumst. Nulla ultrices odio.
-                    Donec augue. Phasellus dui. Maecenas facilisis nisl vitae nibh.
-                    Proin vel seo est vitae eros pretium dignissim.
-                    Aliquam aliquam sodales orci. Suspendisse potenti.
-                   </p> <br>
-
-                <p class="card-text" style="color: #7f8793"> Nunc adipiscing euismod arcu. Quisque facilisis mattis lacus.
-                    Fusce bibendum, velit in venenatis viverra, tellus ligula dignissim felis,
-                    quis euismod mauris tellus ut urna. Proin scelerisque.
-                    Nulla in mi. Integer ac leo. Nunc urna ligula, gravida a,
-                    pretium vitae, bibendum nec, ante. Aliquam ullamcorper
-                    iaculis lectus. Sed vel dui. Etiam lacinia risus vitae lacus.
-                    Aliquam elementum imperdiet turpis.</p>
-
-                <br>
-                <a href="#"><img src="images/download.png" alt="social"></a>
-            </div>
-        </div>
     </div>
 </div>
+
+        <?php
+        foreach ($musik as $musikken) {
+            ?>
+
+            <div class="container">
+                <div class="row">
+                    <div class="card col-12 col-md-6 col-lg-5 p-2 m-3 shadow">
+                        <div class="row">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <a href="sang.php"><h5 class="card-title"><?php echo $musikken->musikTitel; ?></h5></a>
+                                    <p class="card-text" style="color: #7f8793">     <?php
+                                        echo $musikken->musikKunstner
+                                        ?>
+                                        <br>
+                                        <?php
+                                        echo $musikken->musikAlbum
+                                        ?></p>
+                                    <?php
+                                    echo $musikken->musikTid
+                                    ?>
+                                    <?php
+                                    echo $musikken->musikDato
+                                    ?>
+                                    <?php
+                                    echo $musikken->musikGenre
+                                    ?>
+                                    <?php
+                                    echo $musikken->musikBeskrivelse
+                                    ?>
+                                    <?php
+                                    echo $musikken->musikRating
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php
+        }
+        ?>
+
+
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -93,6 +121,21 @@
     function myFunction(x) {
         x.classList.toggle("change");
     }
+</script>
+
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    function myFunction(x) {
+        x.classList.toggle("change");
+    }
+</script>
+
+<script type="module">
+    import Musik from "./js/musik.js";
+
+    const musik = new Musik();
+    musik.init();
 </script>
 
 </body>

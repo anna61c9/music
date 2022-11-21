@@ -26,9 +26,11 @@ if(isset($data["password"]) && $data["password"] == "KickPHP") {
     $bind = [];
 
     if(!empty($data["nameSearch"])) {
-        $sql .= " AND musikTitel LIKE CONCAT('%' :musikTitel '%') ";
-        $bind [":musikTitel"] = $data["nameSearch"];
+        $sql .= " AND (musikTitel LIKE CONCAT('%' :nameSearch '%') OR musikAlbum LIKE CONCAT('%' :nameSearch '%')) ";
+        $bind [":nameSearch"] = $data["nameSearch"];
     }
+
+    $sql .= " ORDER BY musikTitel ASC";
 
     $musik = $db->sql($sql, $bind);
     header("HTTP/1.1 200 OK");
