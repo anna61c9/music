@@ -35,7 +35,7 @@ export default class Musik {
                 </div>
                 <div class="col-6">
                     <div class="card-body">
-                        <a href="sang.php"><h5 class="card-title">${item.musikTitel} </h5></a>
+                        <a href="sang.php"><h5 class="card-title " style="color:rgba(100,150,230,0.85);">${item.musikTitel} </h5></a>
                         <h5 class="card-text">${item.musikAlbum} </h5>
                         <h5 class="card-text">${item.musikKunstner} </h5>
                         <p class="card-text">${item.musikTid} </p>

@@ -29,7 +29,7 @@ $musik = $db->sql("SELECT * FROM musik");
 
 <nav class="navbar navbar-expand-lg navbar-light shadow">
     <div class="container-fluid">
-        <a class="navbar-brand ms-2" href="index.html"><img src="images/logo.png" alt="Home"></a>
+        <a class="navbar-brand ms-2" href="index.php"><img src="images/logo.png" alt="Home"></a>
         <div class="order-lg-start d-flex">
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup"
@@ -45,8 +45,8 @@ $musik = $db->sql("SELECT * FROM musik");
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav container-fluid d-flex justify-content-between">
                 <div class="container-fluid d-flex align-self-center align-items-baseline">
-                    <a class="nav-link active p-2" style="color: rgba(0,0,255,0.85)" aria-current="page" href="...">Artists</a>
-                    <a class="nav-link p-2" style="color:rgba(0, 0, 255,0.85);" href="...">Behind the music</a>
+                    <a class="nav-link active p-2" style="color: rgba(100,150,230,0.85)" aria-current="page" href="...">Artists</a>
+                    <a class="nav-link p-2" style="color:rgba(100,150,230,0.85);" href="...">Behind the music</a>
                 </div>
                 <a class="nav-link order-lg-start justify-content-lg-end p-3"
                    href="..."><img src="images/Instagram.png" alt="social"></a>
@@ -57,8 +57,6 @@ $musik = $db->sql("SELECT * FROM musik");
         </div>
     </div>
 </nav>
-
-<br><br>
 
 
 <div class="container">
@@ -78,7 +76,8 @@ $musik = $db->sql("SELECT * FROM musik");
     </div>
 </div>
 
-<br><br>
+<br>
+<div class="container" style="height: 14rem;"></div>
 
 <div class="container-fluid bg-minfarve fixed-bottom" style="max-height: 30rem;">
     <div class="container details pt-3">

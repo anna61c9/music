@@ -27,7 +27,7 @@ $musik = $db->sql("SELECT * FROM musik WHERE musikId=6");
 
 <nav class="navbar navbar-expand-lg navbar-light shadow">
     <div class="container-fluid">
-        <a class="navbar-brand ms-2" href="index.html"><img src="images/logo.png" alt="Home"></a>
+        <a class="navbar-brand ms-2" href="index.php"><img src="images/logo.png" alt="Home"></a>
         <div class="order-lg-start d-flex">
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup"
@@ -43,8 +43,8 @@ $musik = $db->sql("SELECT * FROM musik WHERE musikId=6");
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav container-fluid d-flex justify-content-between">
                 <div class="container-fluid d-flex align-self-center align-items-baseline">
-                    <a class="nav-link active p-2" style="color: rgba(0,0,255,0.85)" aria-current="page" href="...">Artists</a>
-                    <a class="nav-link p-2" style="color:rgba(0, 0, 255,0.85);" href="...">Behind the music</a>
+                    <a class="nav-link active p-2" style="color:rgba(100,150,230,0.85);" aria-current="page" href="...">Artists</a>
+                    <a class="nav-link p-2" style="color:rgba(100,150,230,0.85);" href="...">Behind the music</a>
                 </div>
                 <a class="nav-link order-lg-start justify-content-lg-end p-3"
                    href="..."><img src="images/Instagram.png" alt="social"></a>
@@ -61,18 +61,20 @@ $musik = $db->sql("SELECT * FROM musik WHERE musikId=6");
 
 <div class="container beskrivelse justify-content-center">
 
-<?php
-foreach ($musik as $musikken) {
+    <?php
+    foreach ($musik
+
+    as $musikken) {
     ?>
 
     <div class="container">
         <div class="row">
             <div class="card-body">
-            <div class="card col-12 col-md-6 col-lg-5 p-2 m-3 shadow">
-                        <img src="images/ace%20of%20spades.jpg" class="card-img-top" style="width: 500vh" alt="cover">
-                <div class="col-8">
+                <div class="card col-12 col-md-6 col-lg-5 p-2 m-3 shadow">
+                    <img src="images/ace%20of%20spades.jpg" class="card-img-top" style="width: 500vh" alt="cover">
+                    <div class="col-8">
 
-                        <a href="sang.php"><h5 class="card-title"><?php echo $musikken->musikTitel; ?></h5></a>
+                        <a href="sang.php"><h5 class="card-title" style="color:rgba(100,150,230,0.85);"><?php echo $musikken->musikTitel; ?></h5></a>
                         <p class="card-text" style="color: #7f8793">     <?php
                             echo $musikken->musikKunstner
                             ?>
@@ -80,11 +82,11 @@ foreach ($musik as $musikken) {
                             <?php
                             echo $musikken->musikAlbum
                             ?></p>
-                    <br>
+                        <br>
                         <?php
                         echo $musikken->musikTid
                         ?>
-                    <br><br>
+                        <br><br>
 
                         <?php
                         echo $musikken->musikGenre
@@ -92,23 +94,23 @@ foreach ($musik as $musikken) {
                         <?php
                         echo $musikken->musikBeskrivelse
                         ?>
-                    <br><br>
+                        <br><br>
 
                         <?php
                         echo $musikken->musikRating
                         ?>
 
-                    <br><br>
-                    <?php
-                    echo $musikken->musikDato
-                    ?>
+                        <br><br>
+                        <?php
+                        echo $musikken->musikDato
+                        ?>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
-    <?php
+</div>
+<?php
 }
 ?>
 
