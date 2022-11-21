@@ -80,13 +80,10 @@ $musik = $db->sql("SELECT * FROM musik");
 
 <br><br>
 
-<div class="container-fluid bg-minfarve fixed-bottom" style="max-height: 10rem;">
+<div class="container-fluid bg-minfarve fixed-bottom" style="max-height: 30rem;">
     <div class="container details pt-3">
-        <div class="row justify-content-center mt-3">
+        <div class="row justify-content-between mt-3">
             <div class="track-art col-lg-3 col-12"></div>
-
-            <div class="track-name col-12 d-lg-none d-flex justify-content-center">Track Name</div>
-            <div class="track-artist col-12 d-lg-none d-flex justify-content-center">Track Artist</div>
 
             <div class="buttons align-items-center col-lg-6 d-flex justify-content-center">
                 <div class="prev-track" onclick="prevTrack()">
@@ -99,28 +96,27 @@ $musik = $db->sql("SELECT * FROM musik");
                     <i class="fa fa-step-forward fa-2x"></i>
                 </div>
             </div>
-            <div class="col-lg-3"></div>
+
         </div>
 
         <div class="row">
-            <div class="track-name col-lg-12 d-none d-lg-block">Track Name</div>
-            <div class="track-artist col-lg-3 d-none d-lg-block">Track Artist</div>
+            <div class="track-name col-lg-12 d-none d-lg-block">Ace of spades</div>
+            <div class="track-artist col-lg-3 d-none d-lg-block">Motörhead</div>
 
-            <div class="slider_container col-lg-6">
+            <div class="slider_container col-lg-4">
                 <div class="current-time d-none d-mb-block d-lg-block">00:00</div>
                 <input type="range" min="1" max="100"
                        value="0" class="seek_slider" onchange="seekTo()">
                 <div class="total-duration d-none d-mb-block d-lg-block">00:00</div>
             </div>
 
-            <div class="slider_container col-lg-6 d-flex d-block d-lg-none">
+            <div class="slider_container col-lg-4 d-flex d-block d-lg-none">
                 <div class="row justify-content-center">
                     <div class="current-time col-6">00:00</div>
                     <div class="total-duration col-6">00:00</div>
                 </div>
             </div>
-
-            <div class="slider_container col-3 d-none d-dm-block d-lg-block">
+            <div class="slider_container col-3 d-none d-dm-block d-lg-block align-items-center">
                 <i class="fa fa-volume-down"></i>
                 <input type="range" min="1" max="100"
                        value="99" class="volume_slider" onchange="setVolume()">
@@ -128,7 +124,8 @@ $musik = $db->sql("SELECT * FROM musik");
             </div>
         </div>
     </div>
-</div>
+    </div>
+
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
