@@ -69,7 +69,7 @@ $musik = $db->sql("SELECT * FROM musik WHERE musikId=6");
 
     <div class="container">
         <div class="row">
-            <div class="card-body ">
+            <div class="card-body cardsong">
                 <div class="card col-12 col-md-6 col-lg-5 p-2 m-3">
                     <img src="images/ace%20of%20spades.jpg" class="card-img-top" style="width: 500vh" alt="cover">
                     <div class="col-8 col-md-6 col-lg-7 text-center">
