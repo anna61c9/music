@@ -67,45 +67,45 @@ $musik = $db->sql("SELECT * FROM musik WHERE musikId=6");
     as $musikken) {
     ?>
 
-    <div class="container">
+    <div class="container d-flex">
         <div class="row">
-            <div class="card-body cardsong">
-                <div class="card col-12 col-md-6 col-lg-5 p-2 m-3">
-                    <img src="images/ace%20of%20spades.jpg" class="card-img-top" style="width: 500vh" alt="cover">
-                    <div class="col-8 col-md-6 col-lg-7 text-center">
+            <div class="col-lg-6 ">
+                <img src="images/ace%20of%20spades.jpg" class="card-img-top" style="max-width: 30rem;" alt="cover">
+            </div>
 
-                        <a href="sang.php"><h5 class="card-title" style="color:rgba(100,150,230,0.85);"><?php echo $musikken->musikTitel; ?></h5></a>
-                        <p class="card-text" style="color: #7f8793">     <?php
-                            echo $musikken->musikKunstner
-                            ?>
-                            <br>
-                            <?php
-                            echo $musikken->musikAlbum
-                            ?></p>
-                        <br>
-                        <?php
-                        echo $musikken->musikTid
-                        ?>
-                        <br><br>
+            <div class="col-lg-4">
+                <a href="sang.php"><h5 class="card-title"
+                                       style="color:rgba(100,150,230,0.85);"><?php echo $musikken->musikTitel; ?></h5>
+                </a>
+                <p class="card-text" style="color: #7f8793">     <?php
+                    echo $musikken->musikKunstner
+                    ?>
+                    <br>
+                    <?php
+                    echo $musikken->musikAlbum
+                    ?></p>
+                <br>
+                <?php
+                echo $musikken->musikTid
+                ?>
+                <br><br>
 
-                        <?php
-                        echo $musikken->musikGenre
-                        ?>
-                        <?php
-                        echo $musikken->musikBeskrivelse
-                        ?>
-                        <br><br>
+                <?php
+                echo $musikken->musikGenre
+                ?>
+                <?php
+                echo $musikken->musikBeskrivelse
+                ?>
+                <br><br>
 
-                        <?php
-                        echo $musikken->musikRating
-                        ?>
+                <?php
+                echo $musikken->musikRating
+                ?>
 
-                        <br><br>
-                        <?php
-                        echo $musikken->musikDato
-                        ?>
-                    </div>
-                </div>
+                <br><br>
+                <?php
+                echo $musikken->musikDato
+                ?>
             </div>
         </div>
     </div>
